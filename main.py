@@ -52,10 +52,10 @@ def enviar_email(mensagem):
     if smtp_obj.starttls()[0] != 220:
         raise Exception('não foi possivel habilitar a criptografia')
 
-    if smtp_obj.login('anonimous632@gmail.com', 'odyutchawtogrvnd')[0] != 235:
+    if smtp_obj.login('email@origem.com', 'senha')[0] != 235:
         raise Exception('o login não foi bem sucedito')
 
-    smtp_obj.sendmail('anonimous632@gmail.com', 'lluizsoares96@gmail.com', mensagem)
+    smtp_obj.sendmail('email@origem.com', 'email@destino.com', mensagem)
     smtp_obj.quit()
 
 
